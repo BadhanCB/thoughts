@@ -17,7 +17,7 @@ const ThemeToggle = () => {
             style={
                 theme === "light"
                     ? { color: "yellow", backgroundColor: "black" }
-                    : { color: "darkgray", backgroundColor: "whitesmoke" }
+                    : { color: "white", backgroundColor: "darkgray" }
             }
             onClick={handleThemeToggle}
             className={styles.container}
