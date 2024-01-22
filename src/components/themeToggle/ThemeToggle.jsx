@@ -12,8 +12,6 @@ const ThemeToggle = () => {
         setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
 
-    console.log(theme);
-
     return (
         <div
             style={
