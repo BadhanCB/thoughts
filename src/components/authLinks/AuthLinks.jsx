@@ -7,10 +7,10 @@ const AuthLinks = () => {
   return (
     <>
     { status === 'authenticated' ? (<>
-      <Link href={'/write'}>Write</Link>
+      <Link href='/write'>Write</Link>
       <button className={styles.logout}>Logout</button>
     </>) : (
-      <Link href={'/login'}>Login</Link>
+      <Link href='/login'>Login</Link>
     )}
     </>
   )

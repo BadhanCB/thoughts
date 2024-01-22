@@ -1,15 +1,41 @@
+"use client";
 import { IoMoon, IoSunny } from "react-icons/io5";
 import { FaCircle } from "react-icons/fa6";
-import styles from './themeToggle.module.css';
+import styles from "./themeToggle.module.css";
+import { useContext } from "react";
+import { ThemeContext } from "@/contexts/Contexts";
 
 const ThemeToggle = () => {
-  return (
-    <div className={styles.container}>
-      <IoSunny />
-      <FaCircle className={styles.themeTogglerCircle} />
-      <IoMoon />
-    </div>
-  )
-}
+    const { theme, setTheme } = useContext(ThemeContext);
+
+    const handleThemeToggle = () => {
+        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    };
+
+    console.log(theme);
+
+    return (
+        <div
+            style={
+                theme === "light"
+                    ? { color: "yellow", backgroundColor: "black" }
+                    : { color: "darkgray", backgroundColor: "whitesmoke" }
+            }
+            onClick={handleThemeToggle}
+            className={styles.container}
+        >
+            <IoSunny />
+            <FaCircle
+                style={
+                    theme === "light"
+                        ? { right: "2px", color: "whitesmoke" }
+                        : { left: "2px", color: "black" }
+                }
+                className={styles.themeTogglerCircle}
+            />
+            <IoMoon />
+        </div>
+    );
+};
 
 export default ThemeToggle;
