@@ -3,4 +3,37 @@
     background-color: transparent;
     cursor: pointer;
     font-size: inherit;
+    color: var(--textColor)
+}
+.hamburger{
+    display: none;
+    font-size: larger;
+    cursor: pointer;
+}
+.mobilemenu{
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: var(--bg);
+    color: var(--textColor);
+}
+@media screen and (max-width: 640px) {
+    .link{
+        display: none;
+    }
+    .hamburger{
+        display: inline-block;
+    }
+    .mobilemenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: larger;
+        gap: 50px;
+    }
 }
