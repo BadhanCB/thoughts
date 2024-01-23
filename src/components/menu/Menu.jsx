@@ -2,9 +2,9 @@ import styles from './menu.module.css';
 
 const Menu = () => {
     return (
-        <div>
+        <aside className={styles.container}>
             Menu
-        </div>
+        </aside>
     );
 };
 
