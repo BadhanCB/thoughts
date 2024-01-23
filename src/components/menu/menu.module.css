@@ -1,3 +1,23 @@
 .container{
     flex: 2;
 }
+.subtitle{
+    color: var(--softTextColor);
+    font-size: 16px;
+    font-weight: 400;
+}
+.title{
+    font-size: 28px;
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin: 35px 0 60px;
+}
+.categoryList{
+    margin: 35px 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
