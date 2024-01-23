@@ -5,8 +5,8 @@ const Featured = () => {
     return (
         <section className={styles.container}>
             <h1 className={styles.title}>
-                <b>Publish your passions your way</b> You'd like to share your
-                knowledge, experiences or the latest news, create a unique and
+                <strong>Publish your passions your way</strong> share your
+                knowledge or experiences, create a unique and
                 beautiful blog
             </h1>
             <div className={styles.post}>
