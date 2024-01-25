@@ -1,0 +1,11 @@
+.title{
+    font-size: 30px;
+    padding: 15px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--softBg);
+    width: 100%;
+}
+.title:focus{
+    outline: none;
+}

@@ -42,3 +42,26 @@
     border-bottom: 1px solid var(--softTextColor);
     padding-bottom: 3px;
 }
+
+@media screen and (max-width: 1024px) {
+    .post{
+        flex-direction: column;
+    }
+    .imageWrapper{
+        height: 300px;
+        flex: none;
+    }
+    .postContent{
+        flex: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .imageWrapper{
+        height: 200px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .imageWrapper{
+        height: 150px;
+    }
+}

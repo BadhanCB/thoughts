@@ -21,3 +21,13 @@
     flex-wrap: wrap;
     gap: 20px;
 }
+@media screen and (max-width: 1024px) {
+    .categoryList{
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 769px) {
+    .container{
+        display: none;
+    }
+}

@@ -1,0 +1,47 @@
+.title{
+    margin-bottom: 20px;
+}
+.singleComments{
+    margin-bottom: 20px;
+}
+.commentForm{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+.commentInput{
+    flex-grow: 1;
+    padding: 20px;
+    font-size: 20px;
+}
+.commentSubmitBtn{
+    padding: 15px;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.commenter{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+.commenterAvatar{
+    object-fit: cover;
+    border-radius: 50%;
+}
+.commenterInfo{
+    color: var(--softTextColor);
+}
+.commenterName{
+    font-size: 20px;
+    font-weight: 500;
+}
+.commentDate{
+    font-size: 14px;
+}
