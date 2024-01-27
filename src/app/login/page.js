@@ -7,7 +7,7 @@ import { FiGithub } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';
 
 const Login = () => {
-    const {data, status} = useSession();
+    const { status } = useSession();
     const router = useRouter();
     
     if(status === 'loading'){
