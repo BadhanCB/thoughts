@@ -1,15 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import styles from "./write.module.css";
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "./write.css";
 
 const Write = () => {
     const [content, setContent] = useState("");
+    const ReactQuill = useMemo(() => dynamic(() => import('react-quill'), { ssr: false }),[]);
 
     return (
-        <section>
+        <main>
             <input
                 type="text"
                 name="title"
@@ -25,7 +25,7 @@ const Write = () => {
                 placeholder="Content..."
             />
             <button onClick={() => console.log(content)} className={styles.button}>Publish</button>
-        </section>
+        </main>
     );
 };
 

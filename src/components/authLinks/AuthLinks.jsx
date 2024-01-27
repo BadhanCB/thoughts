@@ -3,10 +3,11 @@ import Link from "next/link";
 import styles from "./authLinks.module.css";
 import { FiAlignRight } from "react-icons/fi";
 import { useState } from "react";
+import { signOut, useSession } from "next-auth/react";
 
 const AuthLinks = () => {
     const [open, setOpen] = useState(false);
-    const status = "authenticated";
+    const { status } = useSession();
 
     return (
         <>
@@ -15,13 +16,15 @@ const AuthLinks = () => {
                     <Link className={styles.link} href="/write">
                         Write
                     </Link>
-                    <button className={`${styles.logout} ${styles.link}`}>Logout</button>
+                    <button
+                        onClick={() => signOut()}
+                        className={`${styles.logout} ${styles.link}`}
+                    >
+                        Logout
+                    </button>
                 </>
             ) : (
-                <Link
-                    className={styles.link}
-                    href="/login"
-                >
+                <Link className={styles.link} href="/login">
                     Login
                 </Link>
             )}
@@ -32,12 +35,15 @@ const AuthLinks = () => {
             {open && (
                 <div className={styles.mobilemenu}>
                     <Link href="/">Homepage</Link>
-                    <Link href="/">Contact</Link>
+                    <Link href="/blog">Blogs</Link>
                     <Link href="/">About</Link>
                     {status === "authenticated" ? (
                         <>
                             <Link href="/write">Write</Link>
-                            <button className={`${styles.logout}`}>
+                            <button
+                                onClick={() => signOut()}
+                                className={`${styles.logout}`}
+                            >
                                 Logout
                             </button>
                         </>
