@@ -3,7 +3,7 @@ import styles from "./categoryList.module.css";
 import Image from "next/image";
 
 const getCategories = async () => {
-    const res = await fetch("http://localhost:3000/api/categories", {cache: "no-cache"});
+    const res = await fetch("https://thoughts-sable.vercel.app/api/categories", {cache: "no-cache"});
 
     if (!res.ok) {
         throw new Error("Failed to fetch");

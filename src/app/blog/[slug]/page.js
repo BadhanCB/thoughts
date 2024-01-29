@@ -4,7 +4,7 @@ import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 
 const getData = async (slug) => {
-    const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {cache: "no-cache"});
+    const res = await fetch(`https://thoughts-sable.vercel.app/api/posts/${slug}`, {cache: "no-cache"});
 
     if (!res.ok) {
         console.log(res);

@@ -59,7 +59,7 @@ const Write = () => {
         },
     };
     const { isLoading, data, error } = useSWR(
-        "http://localhost:3000/api/categories",
+        "https://thoughts-sable.vercel.app/api/categories",
         fetcher
     );
 
@@ -119,7 +119,7 @@ const Write = () => {
                                     img: downloadURL,
                                 };
                     
-                                await fetch("http://localhost:3000/api/posts", {
+                                await fetch("https://thoughts-sable.vercel.app/api/posts", {
                                     method: "POST",
                                     body: JSON.stringify(newPost),
                                 });

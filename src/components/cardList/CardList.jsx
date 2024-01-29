@@ -3,8 +3,8 @@ import styles from "./cardList.module.css";
 import PostCard from "../postCard/PostCard";
 
 const getPosts = async (page, cat) => {
-    const res = await fetch(`http://localhost:3000/api/posts?page=${page}&cat=${cat}`, {cache: 'no-cache'});
-    // console.log(`http://localhost:3000/api/posts?page=${page}&cat=${cat || ''}`);
+    const res = await fetch(`https://thoughts-sable.vercel.app/api/posts?page=${page}&cat=${cat}`, {cache: 'no-cache'});
+    // console.log(`https://thoughts-sable.vercel.app/api/posts?page=${page}&cat=${cat || ''}`);
 
     if (!res.ok) {
         throw new Error("Failed to fetch");

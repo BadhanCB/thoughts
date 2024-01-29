@@ -20,7 +20,7 @@ const fetcher = async (url) => {
 const Comments = ({ postSlug }) => {
     const { status } = useSession();
     const { isLoading, data, error, mutate } = useSWR(
-        `http://localhost:3000/api/comments?postSlug=${postSlug}`,
+        `https://thoughts-sable.vercel.app/api/comments?postSlug=${postSlug}`,
         fetcher
     );
 
@@ -29,7 +29,7 @@ const Comments = ({ postSlug }) => {
         const newComment = { desc: e.target.comment.value, postSlug };
 
         try {
-            await fetch("http://localhost:3000/api/comments", {
+            await fetch("https://thoughts-sable.vercel.app/api/comments", {
                 method: "POST",
                 body: JSON.stringify(newComment),
             });
