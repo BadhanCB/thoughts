@@ -1,20 +1,32 @@
-import Image from "next/image";
 import Pagination from "../pagination/Pagination";
 import styles from "./cardList.module.css";
-import Link from "next/link";
 import PostCard from "../postCard/PostCard";
 
-const CardList = () => {
+const getPosts = async (page, cat) => {
+    const res = await fetch(`http://localhost:3000/api/posts?page=${page}&cat=${cat}`, {cache: 'no-cache'});
+    // console.log(`http://localhost:3000/api/posts?page=${page}&cat=${cat || ''}`);
+
+    if (!res.ok) {
+        throw new Error("Failed to fetch");
+    }
+
+    return res.json();
+};
+
+const CardList = async ({ page, cat }) => {
+    const {posts, count} = await getPosts(page, cat);
+
     return (
         <section className={styles.container}>
             <h2 className={styles.title}>Recent Posts</h2>
             <div className={styles.posts}>
-                <PostCard />
-                <PostCard />
-                <PostCard />
-                <PostCard />
+                {posts.length
+                    ? posts.map((post) => (
+                          <PostCard key={post.id} post={post} />
+                      ))
+                    : <h1 style={{margin: '60px 0', textAlign: 'center'}}>There is no Blog found</h1>}
             </div>
-            <Pagination />
+            <Pagination page={page} count={count} />
         </section>
     );
 };

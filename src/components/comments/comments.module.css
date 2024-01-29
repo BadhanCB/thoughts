@@ -9,7 +9,6 @@
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    margin-bottom: 4rem;
 }
 .commentInput{
     flex-grow: 1;
@@ -24,6 +23,9 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.comments{
+    margin-top: 4rem;
 }
 .commenter{
     display: flex;

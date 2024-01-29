@@ -2,12 +2,15 @@ import CardList from '@/components/cardList/CardList';
 import styles from './blog.module.css';
 import Menu from '@/components/menu/Menu';
 
-const Blog = () => {
+const Blog = ({searchParams}) => {
+    const page = parseInt(searchParams?.page) || 1;
+    const category = searchParams?.cat;
+
     return (
         <main>
-            <h2 className={styles.title}>Styles</h2>
+            {category && <h2 className={styles.title}>{category}</h2>}
             <section className={styles.content}>
-                <CardList />
+                <CardList page={page} cat={category} />
                 <Menu />
             </section>
         </main>

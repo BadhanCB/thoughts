@@ -9,3 +9,16 @@
 .title:focus{
     outline: none;
 }
+.blogInfo{
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+.imgLabel{
+    cursor: pointer;
+}
+/* .imgContainer{
+    
+} */

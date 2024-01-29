@@ -37,6 +37,18 @@
     font-weight: 300;
     text-align: justify;
 }
+.postDesc h1{
+    font-size: 20px;
+}
+.postDesc h2{
+    font-size: 16px;
+}
+.postDesc h3{
+    font-size: 12px;
+}
+.postDesc h4{
+    font-size: 8px;
+}
 .link{
     width: max-content;
     border-bottom: 1px solid var(--softTextColor);

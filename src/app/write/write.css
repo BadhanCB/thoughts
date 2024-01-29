@@ -15,3 +15,16 @@
 .ql-editor.ql-blank{
     min-height: 50vh;
 }
+.ql-toolbar .ql-stroke {
+    fill: none;
+    stroke: var(--textColor);
+}
+
+.ql-toolbar .ql-fill {
+    fill: var(--textColor);
+    stroke: none;
+}
+
+.ql-toolbar .ql-picker {
+    color: var(--textColor);
+}
